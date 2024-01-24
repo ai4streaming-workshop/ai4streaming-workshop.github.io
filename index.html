@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>AIS: Vision, Graphics and AI for Streaming @ CVPR 2024 Workshop</title>
+    <meta name="description" content="AIS: Vision, Graphics and AI for Streaming @ CVPR 2024 Workshop">
+	<meta name="keywords" content="CVPR, 2024, AIS, AI, Streaming, Workshop, NTIRE, Computer Vision, Video">
+	<meta name="author" content="Marcos V. Conde">
+    <!-- Favicon -->
+    <!--<link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick slider -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+    <!-- Main Style -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+
+    <!-- Open Sans for body font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+	<!-- Montserrat for title -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  	<!-- Start Header -->
+	<header id="mu-hero" class="" role="banner">
+		<!-- Start menu  -->
+		<nav class="navbar navbar-fixed-top navbar-default mu-navbar">
+		  	<div class="container">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+
+			      <!-- Logo -->
+
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      	<ul class="nav navbar-nav mu-menu navbar-right">
+ <!--<li><img src="assets/images/logo_.png" width=90 style="margin:0px 0px;padding:0px 0px"></li>-->
+				        <li><a href="#mu-about"> 		Overview</a></li>
+						<li><a href="#mu-cfp"> 			Submission</a></li>
+						<li><a href="#mu-challenges"> 	Challenges</a></li>
+						<li><a href="#mu-speakers">		Speakers</a></li>
+				        <li><a href="#mu-schedule">		Schedule</a></li>
+			            <li><a href="#mu-organizers">	Organizers</a></li>
+
+			      	</ul>
+			    </div><!-- /.navbar-collapse -->
+		  	</div><!-- /.container-fluid -->
+		</nav>
+		<!-- End menu -->
+
+		<!-- TITLE & TEASER -->
+		<div class="mu-hero-overlay">
+			<div class="container">
+				<div class="mu-hero-area">
+
+					<!-- Start hero featured area -->
+					<div class="mu-hero-featured-area">
+						<!-- Start center Logo -->
+
+						<div class="mu-hero-featured-content">
+
+							<title> AIS: Vision, Graphics and AI for Streaming </title>
+							<h1> AIS: Vision, Graphics and AI for Streaming </h1>
+							<br>
+							<h2> CVPR 2024 Workshop</h2>
+							<h2> June 2024, TBD </h2>
+							<br>
+							<div class="logo-container">
+								<!-- text based logo -->
+								<!--<a class="mu-logo" href="#"></a>-->
+								<!-- image based logo -->
+								<img src="images/CVPR.jpg" alt="teaser">
+							</div>
+							<!-- End center Logo -->
+						</div>
+					</div>
+					<!-- End hero featured area -->
+
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!--SPONSORS -->
+
+	<!-- <div class="img-container">
+		<img src="images/CVPR_LogoSeattle_2024_Primary.jpg" alt="CVPR 2024" style="width:25%">
+	</div>
+	-->
+	
+	
+	<br><br>
+	
+	<div class="img-container">
+		<img src="images/sponsors/SIE.png" 				alt="Sony Interactive Entertainment" style="width:15%; padding-right:10px;">
+		<img src="images/sponsors/PS.png" 				alt="PlayStation" style="width:5%">
+		<img src="images/sponsors/white.png" 			alt="" style="width:2%">
+		<img src="images/sponsors/Meta-Logo.png" 		alt="Meta" style="width:15%">
+		<img src="images/sponsors/Netflix_Logo_RGB.png" alt="Netflix" style="width:15%">
+		<img src="images/sponsors/wue.jpg" 				alt="Wue CVLab" style="width:15%">
+	</div>
+	<!---->
+
+
+<!-- Start main content -->
+<main role="main">
+
+
+	<!-- OVERVIEW -->
+	<section id="mu-about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mu-about-area">
+						<!-- Start Feature Content -->
+						<div class="row">
+
+					
+						<h2>Overview</h2>
+
+						<p align="justify"> <b>Welcome to the 1st Workshop on AI for Streaming at CVPR!</b>
+							
+							Streaming is a $50.11 billion industry where hundreds of millions of users demand
+							everyday high-quality 4K content on different platforms. 
+							For computer-generated content (e.g., VR, games, metaverse) we also need to consider the computer graphics and rendering pipelines, and possible on-line user interactions.
+							Computer vision and deep learning have emerged as revolutionary forces for rendering content, image and video compression, enhancement, and quality assessment.
+							From neural codecs for efficient compression to deep learning-based video enhancement and quality assessment, these advanced techniques are setting new standards for streaming quality and efficiency. 
+							Moreover, novel neural representations also pose new challenges and opportunities in rendering stremeable content (e.g., novel view synthesis, transmit
+							3D information), allowing to re-define computer graphics pipelines and visual content.
+							
+							This workshop focuses on unifying new streaming technologies, computer graphics, and computer vision, from the modern deep learning point of view.
+						</p>
+
+						</div>
+
+						<!-- End Feature Content -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End OVERVIEW -->
+
+
+	
+	<!-- MAIN CONTENT -->
+	<main role="main">
+
+		<!-- Start CFP -->
+		<section id="mu-cfp">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-cfp-area">
+							<!-- Start Feature Content -->
+							<div class="row">
+
+							<h2>Call for Papers</h2>
+
+							We welcome papers addressing topics related to <b>efficient</b> image/video processing and neural compression. The topics include:<br>
+							<ul>
+								<li>Efficient Deep Learning</li>
+								<li>Model optimization and Quantization</li>
+								<li>Image/video quality assessment</li>
+								<li>Image/video super-resolution and enhancement</li>
+								<li>Generative Models</li>
+								<li>Neural Codecs</li>
+								<li>Real-time Rendering</li>
+								<li>Neural Compression</li>
+							</ul>
+							<br>
+							<p style="color:rgb(56, 112, 209);">
+								<b>The Best Student Paper Award is a PlayStation 5! 🏆🥇</b>
+							</p>
+							<p>
+								<b>Instructions and Policies</b>
+								A paper submission has to be in English, in pdf format, and at most 8 pages (excluding references) in double column. The paper format must follow the same <a href="https://cvpr.thecvf.com/Conferences/2024/AuthorGuidelines">guidelines as for all CVPR submissions.</a> 
+								<em>Dual submission is not allowed.</em> The review process is double blind. Submission site <a style="color:rgb(39, 84, 167);" href="https://cmt3.research.microsoft.com/AIS2024">https://cmt3.research.microsoft.com/AIS2024</a>
+								<br> 
+							</p>
+							<p style="color:rgb(209, 56, 56);">
+								<b>Deadline TBD End-March.</b>
+							</p>
+							<em>Accepted and presented papers will be published after the conference in CVPR Workshops proceedings together with the CVPR 2024 main conference papers.</em>
+							<br><br><br>
+
+							<h2 style="font-size:30px; color:grey; font-weight: 200">Important Dates (TBU)</h2>
+
+							<table>
+								<tr>
+									<td>Challenges Announcement & Registration starts (*) &nbsp&nbsp</td>
+									<td><b>Jan 31, 2024</b></td>
+								</tr>
+
+								<tr>
+									<td>Challenges Start (Development Phase) &nbsp&nbsp</td>
+									<td><b>Feb 1, 2024</b></td>
+								</tr>
+
+								<tr>
+									<td>Challenges Ends (Test Phase) &nbsp&nbsp</td>
+									<td><b>March 15, 2024</b></td>
+								</tr>
+
+								<tr>
+									<td>Paper submission deadline &nbsp&nbsp</td>
+									<td><b>April 1, 2024</b></td>
+								</tr>
+
+								<tr>
+									<td>Paper decision notification &nbsp&nbsp</td>
+									<td><b>April 7, 2024</b></td>
+								</tr>
+
+								<tr>
+									<td>Camera ready deadline &nbsp&nbsp</td>
+									<td><b>April 14, 2024</b></td>
+								</tr>
+
+							</table>
+							<br>
+							<p>(*) Please register at the challenges from Han 31st to get news and updates about them.
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End CFP -->
+
+
+		<!-- Start CHALLENGES -->
+		<section id="mu-challenges">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-challenges-area">
+							<!-- Start Feature Content -->
+							<div class="row">
+
+							<h2>Challenges 🚀</h2>
+
+							<p align="justify">
+								We are happy to host the following grand challenges focused on realistic image/video applications.
+								<ul>
+									<li style="color:rgb(39, 84, 167);">Adaptive Image Super-Resolution</li>
+									<li style="color:rgb(39, 84, 167);">Real-time Video Super-Resolution</li>
+									<li style="color:rgb(39, 84, 167);">UGC Video Quality Assessment</li>
+									<li style="color:rgb(39, 84, 167);">Event-based Gaze Detection and Eye Tracking</li>
+								</ul>
+								<br>
+								<em>The top ranked participants will be awarded and invited to describe their solution and to submit to the associated AIS workshop at CVPR 2024. 
+									The results of the challenge will be published at AIS 2023 workshop, and in the CVPR 2024 Workshops proceedings.</b>
+
+							</p>
+
+							<p>
+								We also invite you to check the challenges at the <a href="https://cvlai.net/ntire/2024/">New Trends in Image Restoration and Enhancement (NTIRE) workshop</a>. 
+							</p>
+							
+
+							<!-- Start speaker Content -->
+
+							<div class="mu-challenge-content">
+								<div class="mu-organizers-slider">
+	
+										<!-- Start single speaker -->
+										<div class="mu-single-organizer">
+											<a href=""><center><img src="images/comps/sr.png" alt="SR Challenge"></center></a>
+											<div class="mu-single-organizer-info">
+												<h3 style="color:rgb(39, 84, 167);">Adaptive Image<br>Super-Resolution </h3>
+											</div>
+										</div>
+										<!-- End single speaker -->
+	
+	
+										<!-- Start single speaker -->
+										<div class="mu-single-organizer">
+											<a href=""><center><img src="images/comps/car.gif" alt="Video SR"></center></a>
+											<div class="mu-single-organizer-info">
+												<h3 style="color:rgb(39, 84, 167);">Real-time Video<br>Super-Resolution</h3>
+											</div>
+										</div>
+										<!-- End single speaker -->
+	
+	
+										<!-- Start single speaker -->
+										<div class="mu-single-organizer">
+											<a href=""><center><img src="images/comps/ugc.gif" alt="UGC VQA"></center></a>
+											<div class="mu-single-organizer-info">
+												<h3 style="color:rgb(39, 84, 167);">UGC Video Quality Assessment</h3>
+											</div>
+										</div>
+										<!-- End single speaker -->
+	
+	
+										<!-- Start single speaker -->
+										<div class="mu-single-organizer">
+											<a href=""><center><img src="images/comps/gaze.png" alt="Gaze Eye Tracking"></center></a>
+											<div class="mu-single-organizer-info">
+												<h3 style="color:rgb(39, 84, 167);">Event-based Gaze Detection and Eye Tracking </h3>
+											</div>
+										</div>
+	
+										<!-- End single speaker -->
+
+									</div>
+								</div>
+							
+							</div>
+
+							<!-- End Feature Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End CHALLENGES -->
+		
+		
+		<!-- Start speaker -->
+		<section id="mu-speakers">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-speakers-area">
+
+							<div class="mu-title-area">
+								<h2 class="mu-title">Invited Speakers (TBU)</h2>
+
+							</div>
+
+							<!-- Start speaker Content -->
+
+							<div class="mu-speakers-content">
+							<div class="mu-organizers-slider">
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://scholar.google.com/citations?user=cx3WgewAAAAJ&hl=en"><center><img src="images/speakers/saman.jpeg" alt="Saman Zadtootaghaj"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Saman Zadtootaghaj</h3>
+											<p>Sony PlayStation</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://scholar.google.com/citations?user=XgljlGUAAAAJ"><center><img src="images/orgs/ioannis.png" alt="Ioannis Katsavounidis"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Ioannis Katsavounidis</h3>
+											<p>Meta</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://scholar.google.com/citations?hl=en&user=36X0IZcAAAAJ"><center><img src="images/orgs/christos.jpeg" alt="Christos Bampis"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Christos Bampis</h3>
+											<p>Netflix</p>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<!-- End Invited Speakers content-->
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- End speakers -->
+
+
+		<!-- Start Schedule  -->
+		<style>
+			.left-align{
+				text-align: left;
+			}
+		</style>
+		<section id="mu-schedule">
+			<div class="container">
+				<div class="row">
+					<div class="colo-md-12">
+						<div class="mu-schedule-area">
+
+							<div class="mu-title-area">
+								<h2 class="mu-title">Schedule Details (TBD)</h2>
+								<ul class="left-align">
+									<li>09:00 - 09:30: Opening</li>
+									<li>09:30 - 10:00: Talk 1</li>
+									<li>10:00 - 10:30: Talk 2</li>
+									<li>10:30 - 12:00: Challenge Presentations</li>
+									<li>12:00 - 13:30: Lunch & Poster Session </li>
+									<li>13:30 - 14:00: Talk 3
+									<li>14:00 - 14:30: Talk 4
+									<li>14:30 - 17:30: Challenge Presentations</li>
+									<li>17:30 - 18:00: Closing Remarks & Award Ceremony
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Schedule -->
+
+		<!-- ORGANIZERS -->
+		<section id="mu-organizers">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-organizers-area">
+
+							<div class="mu-title-area">
+							<h2 class="mu-title">Organizers</h2>
+							</div>
+
+							<!-- ORGANIZERS -->
+
+							<div class="mu-organizers-content">
+							<div class="mu-organizers-slider">
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://mv-lab.github.io/"><center><img src="images/orgs/marcosv.png" alt="Marcos V. Conde"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Marcos V. Conde</h3>
+											<p>University of Würzburg & Sony PlayStation</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://www.informatik.uni-wuerzburg.de/computervision/"><center><img src="images/orgs/RaduTimofte.jpg" alt="Radu Timofte"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Radu Timofte</h3>
+											<p>University of Würzburg</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://scholar.google.com/citations?user=XgljlGUAAAAJ"><center><img src="images/orgs/ioannis.png" alt="Ioannis Katsavounidis"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Ioannis Katsavounidis</h3>
+											<p>Meta</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://scholar.google.com/citations?hl=en&user=36X0IZcAAAAJ"><center><img src="images/orgs/christos.jpeg" alt="Christos Bampis"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Christos Bampis</h3>
+											<p>Netflix</p>
+										</div>
+									</div>
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href=""><center><img src="images/orgs/daniel.jpeg" alt="Daniel Motilla"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Daniel Motilla</h3>
+											<p>Sony PlayStation</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href=""><center><img src="images/orgs/RakeshRanjan.jpg" alt="Rakesh Ranjan"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Rakesh Ranjan</h3>
+											<p>Meta Reality Labs</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href=""><center><img src="images/speakers/saman.jpeg" alt="Saman Zadtootaghaj"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Saman Zadtootaghaj</h3>
+											<p>Sony PlayStation</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+								</div>
+							</div>
+
+							<!-- End ORGANIZERS-->
+						</div>
+
+						<!-- PC MEMBERS-->
+						<div class="row", align="left">
+							<h2 style="font-size:30px; color:grey; font-weight: 200">Program Committee</h2>
+							<!-- 	<div class="large-12 columns" style="text-align:left; column-gap:70px"> -->
+							<!-- 		<li style="margin-left:30px"> -->
+							<!--                 </li>     -->
+							<div class="column">
+								Marcos V. Conde (University of Würzburg & Sony PlayStation)<br>
+								Radu Timofte (University of Würzburg)<br>
+								Zongwei Wu (University of Würzburg)<br>
+								Ioannis Katsavounidis (Meta)<br>
+								Christos Bampis (Netflix)<br>
+								Andy Bigos (Sony PlayStation)<br>
+								Rakesh Ranjan (Meta Reality Labs)<br>
+								TBD<br>
+								<br>
+								<br>
+							</div>
+							
+							<div class="column">
+								Zhi Li (Netflix)<br>
+								Rakesh Ranjan (Meta)<br>
+								Michael Stopa (Sony PlayStation)<br>
+								Daniel Motilla (Sony PlayStation)<br>
+								Saman Zadtootaghaj (Sony PlayStation)<br>
+								Chang Gao (Delft University of Technology)<br>
+								Qinyu Chen (University of Zurich and ETHZ)<br>
+								Zuowen Wang (University of Zurich and ETHZ)<br>
+								<br>
+								<br>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- END ORGANIZERS -->
+
+
+	</main>
+	<!-- End MAIN CONTENT-->
+
+
+
+	<!-- Start footer -->
+	<footer id="mu-footer" role="contentinfo">
+		<div class="container">
+			<div class="mu-footer-area">
+				<div class="mu-footer-bottom">
+					<p>Please fell free to contact <a href="marcos.conde@uni-wuerzburg.de">Marcos Conde</a> for any inquiries. </p>
+					<p class="mu-copy-right"> This website is based on the <a href="https://hfna-workshop.github.io/">HFNA workshop</a>. &copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer -->
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	<!-- Slick slider -->
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <!-- Event Counter -->
+    <script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
+    <!-- Custom js -->
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+
+
+  </body>
+</html>
