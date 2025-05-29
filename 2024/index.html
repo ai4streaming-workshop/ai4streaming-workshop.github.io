@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>AIS: Vision, Graphics and AI for Streaming</title>
+    <meta name="description" content="AIS: Vision, Graphics and AI for Streaming Workshop at CVPR 2024">
+	<meta name="keywords" content="CVPR, AIS, AI, Streaming, Workshop, NTIRE, Computer Vision, Video, Netflix, Meta, PlayStation, Artificial Intelligence">
+	<meta name="author" content="Marcos V. Conde">
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://ai4streaming-workshop.github.io/">
+	<meta property="og:title" content="AI for Streaming Workshop CVPR">
+	<meta property="og:description" content="AIS: Vision, Graphics and AI for Streaming Workshop at CVPR 2024">
+	<meta property="og:image" content="https://ai4streaming-workshop.github.io/images/ais-logo.png">
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://ai4streaming-workshop.github.io/">
+	<meta name="twitter:title" content="AI for Streaming Workshop CVPR">
+	<meta name="twitter:description" content="AIS: Vision, Graphics and AI for Streaming Workshop at CVPR 2024">
+	<meta name="twitter:image" content="https://ai4streaming-workshop.github.io/images/ais-logo.png">
+    <!-- Favicon -->
+    <!--<link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick slider -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+    <!-- Main Style -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+
+    <!-- Open Sans for body font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+	<!-- Montserrat for title -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  	<!-- Start Header -->
+	<header id="mu-hero" class="" role="banner">
+		<!-- Start menu  -->
+		<nav class="navbar navbar-fixed-top navbar-default mu-navbar">
+		  	<div class="container">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+
+			      <!-- Logo -->
+
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      	<ul class="nav navbar-nav mu-menu navbar-right">
+ <!--<li><img src="assets/images/logo_.png" width=90 style="margin:0px 0px;padding:0px 0px"></li>-->
+				        <li><a href="#mu-about"> 		Overview</a></li>
+						<li><a href="#mu-cfp"> 			Submission</a></li>
+						<li><a href="#mu-challenges"> 	Challenges</a></li>
+						<li><a href="#mu-speakers">		Speakers</a></li>
+				        <li><a href="#mu-schedule">		Schedule</a></li>
+			            <li><a href="#mu-organizers">	Organizers</a></li>
+
+			      	</ul>
+			    </div><!-- /.navbar-collapse -->
+		  	</div><!-- /.container-fluid -->
+		</nav>
+		<!-- End menu -->
+
+		<!-- TITLE & TEASER -->
+		<div class="mu-hero-overlay">
+			<div class="container">
+				<div class="mu-hero-area">
+
+					<!-- Start hero featured area -->
+					<div class="mu-hero-featured-area">
+						<!-- Start center Logo -->
+
+						<div class="mu-hero-featured-content">
+
+							<title> AIS: Vision, Graphics and AI for Streaming </title>
+							<h1> AIS: Vision, Graphics and AI for Streaming </h1>
+							<br>
+							<h2> <b>CVPR 2024 Workshop</b> </h2>
+							<h2> <b>Arch 3A</b>, 17th June 2024, Full-Day </h2>
+							<br>
+							<div class="logo-container">
+								<!-- text based logo -->
+								<!--<a class="mu-logo" href="#"></a>-->
+								<!-- image based logo -->
+							</div>
+							<!-- End center Logo -->
+						</div>
+					</div>
+					<!-- End hero featured area -->
+
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!--SPONSORS -->
+
+	<!-- <div class="img-container">
+		<img src="images/CVPR_LogoSeattle_2024_Primary.jpg" alt="CVPR 2024" style="width:25%">
+	</div>
+	-->
+	
+	
+	<br><br>
+	
+	<div class="img-container" widht="auto">
+		<img src="images/ais-logo.png" alt="AIS Logo" style="width:8%; padding-right:12px;">
+		<!-- <img src="images/sponsors/CVPR-logo .svg" alt="CVPR Logo" style="width:8%"> -->
+		<img src="images/sponsors/SIE.png" 				alt="Sony Interactive Entertainment" style="width:12%; padding-right:10px;">
+		<img src="images/sponsors/PS.png" 				alt="PlayStation" style="width:5%; padding-right:15px;">
+		<img src="images/sponsors/Meta-Logo.png" 		alt="Meta" style="width:13%; padding-right:15px">
+		<img src="images/sponsors/meta_reality_labs.png" alt="Meta Reality Labs" style="width:4%">
+	</div>
+
+	<div class="img-container" widht="auto">
+		<img src="images/sponsors/Netflix_Logo_RGB.png" alt="Netflix" style="width:10%">
+		<img src="images/sponsors/wue.jpg" 				alt="Wue" style="width:10%">
+		<img src="images/sponsors/cvlab_logo.png" 		alt="CVLab" style="width:4%">
+	</div>
+
+	<!---->
+
+
+<!-- Start main content -->
+<main role="main">
+
+
+	<!-- OVERVIEW -->
+	<section id="mu-about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mu-about-area">
+						<!-- Start Feature Content -->
+						<div class="row">
+
+					
+						<h2>Overview</h2>
+
+						<p align="justify"> <b>Welcome to the 1st Workshop on AI for Streaming at CVPR!</b>
+							
+							This workshop focuses on unifying new streaming technologies, computer graphics, and computer vision, from the modern deep learning point of view. Streaming is a huge industry where hundreds of millions of users demand everyday high-quality content on different platforms. 
+							Computer vision and deep learning have emerged as revolutionary forces for rendering content, image and video compression, enhancement, and quality assessment.
+							From neural codecs for efficient compression to deep learning-based video enhancement and quality assessment, these advanced techniques are setting new standards for streaming quality and efficiency. 
+							Moreover, novel neural representations also pose new challenges and opportunities in rendering streamable content, and allowing to redefine computer graphics pipelines and visual content.
+							<br>
+							<a href="assets/ais24_challenge_diplomas.pdf"; style="color:rgb(56, 112, 209);"> <b>Awards Certificates</b></a> || 
+							<a href="https://openaccess.thecvf.com/CVPR2024_workshops/AI4Streaming"; style="color:rgb(56, 112, 209);"> <b>(All) Paper Proceedings</b></a>  ||
+							<a href="https://drive.google.com/drive/folders/1fyxWyrB_LZFBJOM0ryQNaF1XR-wie1kJ?usp=sharing"; style="color:rgb(56, 112, 209);"> <b>Photo Gallery & Slides</b></a>
+							<br>
+							<br>
+
+							<div class="img-container" widht="auto">
+								<img src="images/gallery/DSF6299.JPG" style="width:30%">
+								<img src="images/gallery/IMG_20240515_111641.jpg" style="width:30%">
+								<img src="images/gallery/meta_award.jpeg"  style="width:30%">
+							</div>
+							
+						</p>
+
+						</div>
+
+						<!-- End Feature Content -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End OVERVIEW -->
+
+
+	
+	<!-- MAIN CONTENT -->
+	<main role="main">
+
+		<!-- Start CFP -->
+		<section id="mu-cfp">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-cfp-area">
+							<!-- Start Feature Content -->
+							<div class="row">
+
+							<h2>Call for Papers (Closed)</h2>
+
+							We welcome papers addressing topics related to VR, streaming, <b>efficient</b> image/video (pre- & post-)processing and neural compression. The topics include:<br>
+							<br>
+							<div class="container"> 
+								<div class="column">
+									<ul>
+										<li>Efficient Deep Learning</li>
+										<li>Model optimization and Quantization</li>
+										<li>Image/video quality assessment</li>
+										<li>Image/video super-resolution and enhancement</li>
+										<li>Compressed Input Enhancement</li>
+									</ul>
+									<br>
+								</div>
+								<div class="column">
+									<ul>
+										<li>Generative Models (Image & Video)</li>
+										<li>Neural Codecs</li>
+										<li>Real-time Rendering</li>
+										<li>Neural Compression</li>
+										<li>Video pre/post processing</li>
+									</ul>
+									<br>
+								</div>
+							</div>
+							
+							<br>
+
+							<!--
+							
+							<p>
+								<b>Instructions and Policies</b>
+								A paper submission has to be in English, in pdf format, and at most 8 pages (excluding references) in double column. The paper format must follow the same <a href="https://cvpr.thecvf.com/Conferences/2024/AuthorGuidelines">guidelines as for all CVPR submissions.</a> 
+								<em>Dual submission is not allowed.</em> The review process is double blind. Submission site <a style="color:rgb(39, 84, 167);" href="https://cmt3.research.microsoft.com/AIS2024"><b>https://cmt3.research.microsoft.com/AIS2024</b></a>.
+								<em>Accepted and presented papers will be published after the conference in CVPR Workshops proceedings together with the CVPR 2024 main conference papers.</em>
+							</p>
+				
+							
+							<br><br>
+
+							<h2 style="font-size:30px; color:grey; font-weight: 200">Important Dates (TBU)</h2>
+
+							<table>
+
+								<tr>
+									<td>Regular Paper submission deadline (& CVPR resubmissions) &nbsp&nbsp</td>
+									<td><b>March 22, 2024</b></td>
+								</tr>
+
+								<tr>
+									<td>Challenges Announcement & Registration starts (*) &nbsp&nbsp</td>
+									<td><b>Feb 11, 2024</b></td>
+								</tr>
+
+								<tr>
+									<td>Challenges Final Submission (code & factsheet) &nbsp&nbsp</td>
+									<td><b>March 27, 2024</b></td>
+								</tr>
+
+								<tr>
+									<td>Preliminary Challenges Results/Ranking &nbsp&nbsp</td>
+									<td><b>March 28, 2024</b></td>
+								</tr>
+
+								<tr>
+									<td><b>Late & Challenge Paper submission deadline &nbsp&nbsp</b></td>
+									<td><b>April 7, 2024</b></td>
+								</tr>
+
+								<tr>
+									<td>Paper decision notification &nbsp&nbsp</td>
+									<td><b>April 9, 2024</b></td>
+								</tr>
+
+								<tr>
+									<td>Camera ready deadline &nbsp&nbsp</td>
+									<td><b>April 12, 2024</b></td>
+								</tr>
+
+							</table>
+							<br>
+							<p> 
+								<b>Late Paper submissions</b> apply only for previously reviewed papers. In this fast track for previously reviewed papers, the authors must provide the reviews in the supplementary material.
+								<br>
+								<b>Challenge-related Papers</b> apply to papers describing challenge solutions and/or challenge-related poblems using other datasets.
+								<br>
+								<b>Paper decision notification</b> The papers can be rejected, accepted without changes, and conditionally accepted (authors need to implement the changes and feedback from the reviews.)
+							</p>
+							-->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End CFP -->
+
+
+
+
+		<!-- Start CHALLENGES -->
+		<section id="mu-challenges">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-challenges-area">
+							<!-- Start Feature Content -->
+							<div class="row">
+
+							<h2>Challenges 🚀</h2>
+
+							<p align="justify">
+								We are happy to host the following grand challenges focused on realistic image/video applications.<br>
+								<em>Register now in the challenges to receive news by email on updates and new challenges.</em><br>
+								<b>The workshop challenges prizes pool will be +10.000$ 🚀 & cool stuff like PS5s</b>
+								<br>
+								<br>
+								<ul>
+									<a href="https://codalab.lisn.upsaclay.fr/competitions/17699"><li style="color:rgb(56, 112, 209);"> <b> Real-time Compressed Image Super-Resolution  </b> <b style="color:rgb(11, 131, 9);"> (Finished)</b> </li> </a> 
+									A single neural network upscales compressed images (AVIF) to 4K considering different compression factors.<br><br>
+
+									<a href="https://codalab.lisn.upsaclay.fr/competitions/17340"><li style="color:rgb(56, 112, 209);"> <b> UGC Video Quality Assessment </b> <b style="color:rgb(11, 131, 9);"> (Finished)</b> </li> </a>
+									Estimate the quality of user-generated content (UGC) videos using efficient neural networks (24-30 FPS).<br><br>
+
+									<a href="https://www.kaggle.com/competitions/event-based-eye-tracking-ais2024"> <li> <b style="color:rgb(56, 112, 209);"> Event-based Eye Tracking </b>  <b style="color:rgb(11, 131, 9);"> (Finished)</b> </li> </a><br>
+									
+									<a href="https://codalab.lisn.upsaclay.fr/competitions/17705"><li style="color:rgb(56, 112, 209);"> <b> Mobile Real-time Video Super-Resolution </b> <b style="color:rgb(207, 66, 75);"> (Ongoing)</b> </li> </a>
+									Upscale videos compressed with AV1 in real-time on mobile devices such as iPhone 14. Fom 360p to 1080p.<br>
+									(From Feb to July). Top teams will be invited to present their solutions and poster at the workshop. We will showcase the best models.<br><br>
+
+									<a href="https://codalab.lisn.upsaclay.fr/competitions/17705"><li style="color:rgb(56, 112, 209);"> <b> Efficient Video Super-Resolution </b> <b style="color:rgb(207, 66, 75);"> (Ongoing)</b> </li> </a>
+									Upscale videos compressed with AV1 in real-time at 30-60FPS on commercial GPUs. From 540p to 4K.<br>
+									(From Feb to July). Top teams will be invited to present their solutions and poster at the workshop.<br><br>
+
+									<a href="https://codalab.lisn.upsaclay.fr/competitions/17339"><li style="color:rgb(56, 112, 209);"> <b> Depth Upsampling and Refinement </b> <b style="color:rgb(207, 66, 75);"> (Ongoing)</b> </li> </a>
+									(From 22nd March - July) Given a low-resolution depth map, and a high-resolution RGB, upscale and refine the depth map. Top teams will be invited to present their solutions and poster at the workshop.<br><br>
+									
+								</ul>
+								<br>
+								<em> <b>The top ranked participants will be awarded and invited to present their solution at the AIS workshop at CVPR 2024.</b> 
+									<br>The challenge reports (if applicable) will be published at AIS 2024 workshop, and in the CVPR 2024 Workshops proceedings. 
+									<br>The participants can submit papers describing their solution to the challenges and/or related problems (more info below).
+
+							</p>
+
+							<p>
+								We also invite you to check the challenges at the <a href="https://cvlai.net/ntire/2024/"><b>New Trends in Image Restoration and Enhancement (NTIRE) workshop</b> </a>. 
+							</p>
+							
+
+							<!-- Start speaker Content -->
+
+							<div class="mu-challenge-content">
+								<div class="mu-organizers-slider">
+	
+										<!-- Start single speaker -->
+										<div class="mu-single-organizer">
+											<a href="https://codalab.lisn.upsaclay.fr/competitions/17699"><center><img src="images/comps/sr.png" alt="SR Challenge"></center>
+											<div class="mu-single-organizer-info">
+												<h3 style="color:rgb(39, 84, 167);">Real-time Image<br>Super-Resolution </h3>
+												
+											</div>
+											</a>
+										</div>
+										<!-- End single speaker -->
+	
+	
+										<!-- Start single speaker -->
+										<div class="mu-single-organizer">
+											<a href="https://codalab.lisn.upsaclay.fr/competitions/17339"><center><img src="images/depth_WallSlam.gif" alt="Video SR"></center>
+											<div class="mu-single-organizer-info">
+												<h3 style="color:rgb(39, 84, 167);">Depth Upsampling<br>and Refinement</h3>
+												
+											</div>
+											</a>
+										</div>
+										<!-- End single speaker -->
+	
+	
+										<!-- Start single speaker -->
+										<div class="mu-single-organizer">
+											<a href="https://codalab.lisn.upsaclay.fr/competitions/17340"><center><img src="images/comps/ugc.gif" alt="UGC VQA"></center>
+											<div class="mu-single-organizer-info">
+												<h3 style="color:rgb(39, 84, 167);">UGC Video Quality Assessment</h3>
+												
+											</div>
+											</a>
+										</div>
+										<!-- End single speaker -->
+	
+	
+										<!-- Start single speaker -->
+										<div class="mu-single-organizer">
+											<a href="https://www.kaggle.com/competitions/event-based-eye-tracking-ais2024"><center><img src="images/comps/event-based-eye-movement.gif" alt="Eye Tracking"></center>
+											<div class="mu-single-organizer-info">
+												<h3 style="color:rgb(39, 84, 167);">Event-based Eye Tracking </h3>
+												
+											</div>
+											</a>
+										</div>
+	
+										<!-- End single speaker -->
+
+									</div>
+								</div>
+							
+							</div>
+
+							<div class="mu-challenge-content">
+								<div class="mu-organizers-slider">
+	
+										<!-- Start single speaker -->
+										<div class="mu-single-organizer">
+											<a href="https://codalab.lisn.upsaclay.fr/competitions/17705"><center><img src="images/teaser_stvsr.gif" alt="Video SR"></center>
+											<div class="mu-single-organizer-info">
+												<h3 style="color:rgb(39, 84, 167);">Mobile Video<br>Super-Resolution</h3>
+												
+											</div>
+											</a>
+										</div>
+										<!-- End single speaker -->
+	
+	
+										<!-- Start single speaker -->
+										<div class="mu-single-organizer">
+											<a href="https://codalab.lisn.upsaclay.fr/competitions/17705"><center><img src="images/comps/car.gif" alt="Video SR"></center>
+											<div class="mu-single-organizer-info">
+												<h3 style="color:rgb(39, 84, 167);">Efficient Video<br>Super-Resolution</h3>
+												
+											</div>
+											</a>
+										</div>
+										<!-- End single speaker -->
+										
+									</div>
+								</div>
+							
+							</div>
+
+							<!-- End Feature Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End CHALLENGES -->
+		
+		
+		<!-- Start speaker -->
+		<section id="mu-speakers">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-speakers-area">
+
+							<div class="mu-title-area">
+								<br>
+								<h2 class="mu-title">Keynote Speaker</h2>
+								<br>
+							</div>
+
+							<div class="container"  style="background-color:#faf8e1">
+								<div class="column">
+									<a href="https://www.ece.utexas.edu/people/faculty/alan-bovik">
+										<center><img src="images/speakers/Bovik-Al.jpg" alt="Alan Bovik" width="70%"></center>
+									</a>
+								</div>
+								<div class="column">
+									<p>
+										<b>Professor Alan Bovik</b> (HonFRPS) holds the Cockrell Family Endowed Regents Chair in Engineering in the Chandra Family Department of Electrical and Computer Engineering in the Cockrell School of Engineering at The University of Texas at Austin, where he is Director of the Laboratory for Image and Video Engineering (LIVE). He is a faculty member in the Department of Electrical and Computer Engineering, the Wireless Networking and Communication Group (WNCG), and the Institute for Neuroscience. His research interests include digital television, digital photography, visual perception, social media, and image and video processing.
+									</p>
+									<br>
+								</div>
+							</div>
+
+
+							<div class="mu-title-area">
+								<br>
+								<h2 class="mu-title">Invited Speakers</h2>
+							</div>
+
+							<!-- Start speaker Content -->
+
+							<div class="mu-speakers-content">
+							<div class="mu-organizers-slider">
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="http://theis.io/"><center><img src="images/speakers/theis.jpg" alt="Lucas Theis"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Lucas Theis</h3>
+											<p>Google DeepMind</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+									
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://scholar.google.com.hk/citations?user=QYTu_KQAAAAJ&hl=en"><center><img src="images/speakers/Kelvin_Photo.jpg" alt="Kelvin C.K. Chan"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Kelvin C.K. Chan</h3>
+											<p>Google DeepMind</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<center><img src="images/orgs/Ryanlei-Headshot.jpg" alt="Ryan Lei"></center>
+										<div class="mu-single-organizer-info">
+											<h3>Ryan Lei</h3>
+											<p>Meta</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://scholar.google.com/citations?hl=en&user=36X0IZcAAAAJ"><center><img src="images/orgs/christos.jpeg" alt="Christos Bampis"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Christos Bampis</h3>
+											<p>Netflix</p>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<!-- End Invited Speakers content-->
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- End speakers -->
+
+
+		<!-- Start Schedule  -->
+		<style>
+			.left-align{
+				text-align: left;
+			}
+		</style>
+		<section id="mu-schedule">
+			<div class="container">
+				<div class="row">
+					<div class="colo-md-12">
+						<div class="mu-schedule-area">
+
+							<div class="mu-title-area">
+								<h2 class="mu-title">Schedule Details - Arch 3A, 17th June</h2>
+
+								Please click in the title of each presentation to see the abstract. Local time (PDT).
+								<br>
+								<a href="assets/ais24_challenge_diplomas.pdf"; style="color:rgb(56, 112, 209);"> <b>Awards Certificates</b></a> || 
+								<a href="https://openaccess.thecvf.com/CVPR2024_workshops/AI4Streaming"; style="color:rgb(56, 112, 209);"> <b>(All) Paper Proceedings</b></a>  ||
+								<a href="https://drive.google.com/drive/folders/1fyxWyrB_LZFBJOM0ryQNaF1XR-wie1kJ?usp=sharing"; style="color:rgb(56, 112, 209);"> <b>Photo Gallery & Slides</b></a>
+								<br>
+								<br>
+
+								<ul class="left-align">
+									<li>09:00 - 09:15: <b style="color:rgb(42, 141, 53)">Opening</b> </li>
+									<li>09:15 - 10:00: <b>"Event-based Eye-Tracking Challenge & Papers Session"</b> , Qinyu Chen (Leiden University)<br>
+									<hr>
+									<em><b>"Retina : Low-Power Eye Tracking with Event Camera and Spiking Hardware"</b>, Pietro Bonazzi (ETH Zurich)</em> <br>
+									<em><b>"A Hybrid ANN-SNN Architecture for Low-Power and Low-Latency Visual Perception"</b>, Asude Aydin</em> <br>
+									<em><b>"A Lightweight Spatiotemporal Network for Online Eye Tracking with Event Camera"</b>, Yan Ru Pei</em> <br>
+									<em><b>"Co-designing a Sub-millisecond Latency Event-based Eye Tracking System with Submanifold Sparse CNN"</b>, Baoheng Zhang</em> <br>
+									</li>
+									<hr>
+
+									<li>
+									<details>
+									<summary>10:00 - 10:45: <b style="color:rgb(57, 110, 201)">"AI and Machine Learning for Video Compression"</b> by Ryan Lei (Video Codec Specialist, Meta)</summary>
+									<p align="justify">
+										Over the past 30 years, significant advances have been achieved in the video compression domain, which has made it become an absolutely indispensable technology that powers today’s Internet. 
+										Meanwhile, the past decade has also witnessed the great success of machine learning in many areas, especially in computer vision and image processing. 
+										It is very natural to ask if and how machine learning techniques can be leveraged to improve video compression. 
+										In this talk, the speaker will first provide a high level overview of progress in the conventional video coding standard development and the challenges that the community is facing. Then the speaker will focus on a few trends on how machine learning can be leveraged for video compression. The first topic is how machine learning is used to further optimize coding tools of traditional video coding, such as intra/inter prediction, loop filtering, etc. The second topic is how machine learning is used to improve the coding efficiency of the overall compression system, such as pre/post filtering, super resolution, layered coding, etc. 
+										The last topic is how neural networks are used to develop end-to-end learned video coding frameworks and fully replace the conventional video coding system. 
+										Over the talk, the speaker will also present examples of techniques that have worked and techniques that may not work in the near future. 
+									</p>
+									</details>
+									</li>
+
+									<li>10:45 - 11:15: <b>"Video Quality Assessment Challenge and Results"</b>  <br>
+										<em>"COVER: A Comprehensive Video Quality Evaluator", Zhengzhong Tu (Texas A&M University)</em>
+									</li>
+									<hr>
+
+									<li>11:15 - 11:40: <b style="color:rgb(220, 90, 46)">Paper Presentation Session #1 </b> <br> 
+										<em><b>"Deep Video Codec Control for Vision Models"</b>, Christoph Reich  (Technical University of Munich, TU Darmstadt, NEC Laboratories America, Inc., and University of Oxford) </em> <br> 
+										<em><b>"A Perspective on Deep Vision Performance with Standard Image and Video Codecs"</b>, Christoph Reich  (Technical University of Munich, TU Darmstadt, NEC Laboratories America, Inc., and University of Oxford)</em> <br> 
+										<em><b>"Adaptive render-visual (REVI) streaming for virtual environments"</b>, Matthias Treder (Sony PlayStation)</em>
+									</li>
+
+									<hr>
+
+									<li>
+									<details>
+										<summary>11:40 - 12:30: <b style="color:rgb(57, 110, 201)">"Neural Compression & Realism"</b> by Lucas Theis (Google DeepMind)</summary>
+										<p align="justify">
+											Neural compression has the potential to transform the streaming industry by enabling highly realistic outputs at very low rates. 
+											Although these techniques have yet to break into mainstream codecs, recent advances in ML and information theory continue to bring this goal closer into view. 
+											This talk will focus on how generative AI and novel coding methods allow us to generate realistic outputs at arbitrarily low rates. 
+											In particular, we will explore two approaches based on diffusion generative models. 
+											Time permitting, we will also look at recent advances in making neural compression much more computationally efficient. 
+										</p>
+										</details>
+									</li>
+
+									<!--END OF MORNING SESSION-->
+									<li>12:30 - 13:45: <b style="color:rgb(42, 141, 53)"> Lunch & Poster Session</b> </li>
+									<!--AFTERNOON SESSION-->
+
+									<li>
+									<details>
+										<summary>13:45 - 14:35: <b style="color:rgb(121, 32, 159)"> "On the Visual Quality of Pictures, Games, and GenAI"</b>, by Prof. Alan Bovik (The University of Texas) </summary>
+										<p align="justify">
+											Predicting the perceptual quality of pictures and videos is a hard problem that has been successfully addressed in many scenarios, such as quality control of streaming videos and sharing of social media pictures. 
+											In this talk I will address how visual quality perception can be understood using principles of neuroscience and neuro-statistical models of distortion. 
+											In particular I will review some basic vision science that makes accurate perceptual visual quality prediction possible, and how algorithms are designed that are now used worldwide. However, generated content like gaming videos and GenAI pictures are fundamentally different from photographs, and those differences may be statistically testable. I will also discuss a recent approach to gaming content quality prediction called GAMIVAL that combines neuro-statistical models adapted to gaming distortions with deep features that capture gaming semantics. I will also discuss a very early exploration into the underlying perceptual statistics of GenAI pictures, and how these might be used to gauge quality and detectibility.
+										</p>
+										</details>
+										
+									</li>
+
+									<hr>
+
+									<b style="color:rgb(192, 56, 56)"> The "Super-session" starts!</b>
+
+									<li>14:40 - 15:00: <b>On the Edge Real-time Image Super-Resolution</b> Challenge and News!! </li>
+									
+									<!---SUPER RESOLUTION -->
+									<li>
+										<details>
+											<summary>15:00 - 15:40: <b style="color:rgb(57, 110, 201)">"Video Super-Resolution Using Deep Learning"</b> by Kelvin C.K. Chan (Google DeepMind)</summary>
+											<p align="justify">
+												The demand for high-resolution content continues to grow, necessitating advanced video super-resolution (VSR) techniques. 
+												However, existing VSR methods often struggle with efficiency and generalization to real-world scenes. 
+												This talk explores the benefits of leveraging temporal information in VSR, highlighting how recurrent networks can effectively propagate and align information to improve performance in both synthetic and real-world settings. 
+												Additionally, we will delve into the potential of generative models, such as diffusion models, for VSR, motivated by their recent successes in image super-resolution.
+											</p>
+											</details>
+									</li>
+									<li>15:40 - 16:10: <b>VideoGigaGAN</b>: "Towards Detail-rich Video Super-Resolution", Yiran Xu (University of Maryland)</li>
+									<li>16:10 - 16:40: <b>FMA-Net</b>: "Flow-Guided Dynamic Filtering and Iterative Feature Refinement with Multi-Attention for Joint Video Super-Resolution and Deblurring", Jihyong Oh (Chung-Ang University (CAU)) </li>
+
+									<li>
+										<details>
+											<summary>16:45 - 17:30: <b style="color:rgb(57, 110, 201)">"Deploying neural networks for video downscaling: why and how"</b> by Christos Bampis (Netflix)</summary>
+											<p align="justify">
+											Video downscaling is an important component of video processing. Within adaptive streaming, it tailors streaming to different device resolutions and optimizes picture quality under varying network conditions. 
+											Video downscaling is typically done by a conventional resampling filter like Lanczos. 
+											We have deployed neural networks that perform video downscaling within the Netflix adaptive streaming pipeline. 
+											This talk describes why we embarked on this journey, how it was done and lessons learned. 
+											We also discuss possible pathways moving forward.
+											</p>
+											</details>
+										</li>
+									
+									<hr>
+
+									<li>17:30 - 17:50: <b style="color:rgb(220, 90, 46)">Paper Presentation Session #2</b> 
+									<br>
+									<b>"Depth Compression and Upsampling"</b>, Jinseong Kim (RGA Inc.)<br>
+									<b>"One-Click Upgrade from 2D to 3D: Sandwiched RGB-D Video Compression for Stereoscopic Teleconferencing"</b>, Yueyu Hu (New York University)<br>
+									<b>"Low Latency Point Cloud Rendering with Learned Splatting"</b>, Yueyu Hu (New York University)<br>
+									</li>
+									
+									<li>17:50 - 18:00: <b style="color:rgb(42, 141, 53)">Closing Remarks & Award Ceremony <a href="assets/ais24_challenge_diplomas.pdf"; style="color:rgb(56, 112, 209);">[Challenge Diplomas]</a></b>
+									</li>
+								</ul>
+
+								<br>
+								<br>
+								<h3 class="mu-title">Virtual Presentations</h3>
+								<details>
+									
+									<summary> <b style="color:rgb(57, 110, 201)"> (Click to see) Virtual presentations of challenge papers and regular papers.</b> 
+									<br>
+									<em>The videos/slides will be available shortly.</em>
+									
+									</summary>
+									<p align="left">
+										<br>
+										[<a href="", style="color:rgb(33, 76, 206)">Link</a>] "CASR : Efficient Cascade Network Structure with Channel Aligned method for 4K Real-Time Single Image Super-Resolution", Kihwan Yonn (The University of Seoul)
+										<br>
+										[<a href="", style="color:rgb(33, 76, 206)">Link</a>] "Lanczos++: An ultra lightweight image super-resolution network", Biao Wu (Central R＆D Institute, ZTE)
+										<br>
+										[<a href="", style="color:rgb(33, 76, 206)">Link</a>] "FAPNet: An Effective Frequency Adaptive Point-based Eye Tracker", Xiaopeng LIN and Hongwei REN and Bojun CHENG (HKUST-GZ)
+										<br>
+										[<a href="", style="color:rgb(33, 76, 206)">Link</a>] "MambaPupil: Bidirectional Selective Recurrent model for Event-based Eye tracking", Zhong Wang (USTC)
+										<br>
+										[<a href="", style="color:rgb(33, 76, 206)">Link</a>] "Joint Motion Detection in Neural Videos Training", Niloufar Pourian (Intel Labs); Alexey Supikov (Intel Labs)
+										<br>
+										[<a href="", style="color:rgb(33, 76, 206)">Link</a>] "Anchor-based Nested UnshuffleNet for Real-time Super-Resolution (ANUNet)", Menghan Zhou (Lenovo Research)
+										<br>
+										[<a href="", style="color:rgb(33, 76, 206)">Link</a>] "SAFMN++: Improved Feature Modulation Network for Real-Time Compressed Image Super-Resolution", Long Sun (Nanjing University of Science and Technology)
+										<br>
+										[<a href="", style="color:rgb(33, 76, 206)">Link</a>] "RVSR: Towards Real-Time Super-Resolution with Re-parameterization and ViT architecture", Zhiyuan Li (Institute of Artificial Intelligence and Robotics, Xi'an Jiaotong University)
+										<br>
+										[<a href="", style="color:rgb(33, 76, 206)">Link</a>] "TVQE: Tencent Video Quality Evaluator", Wenhui Meng (Tencent)
+									</p>
+								</details>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Schedule -->
+
+		<!-- ORGANIZERS -->
+		<section id="mu-organizers">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-organizers-area">
+
+							<div class="mu-title-area">
+							<h2 class="mu-title">Organizers</h2>
+							</div>
+
+							<!-- ORGANIZERS -->
+
+							<div class="mu-organizers-content">
+							<div class="mu-organizers-slider">
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://mv-lab.github.io/"><center><img src="images/orgs/marcosv.png" alt="Marcos V. Conde"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Marcos V. Conde ✉️</h3>
+											<p>University of Würzburg & Sony PlayStation</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://www.informatik.uni-wuerzburg.de/computervision/"><center><img src="images/orgs/RaduTimofte.jpg" alt="Radu Timofte"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Radu Timofte ✉️</h3>
+											<p>University of Würzburg</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://scholar.google.com/citations?user=XgljlGUAAAAJ"><center><img src="images/orgs/ioannis.png" alt="Ioannis Katsavounidis"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Ioannis Katsavounidis</h3>
+											<p>Meta</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href=""><center><img src="images/orgs/RakeshRanjan.jpg" alt="Rakesh Ranjan"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Rakesh Ranjan</h3>
+											<p>Meta Reality Labs</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href="https://scholar.google.com/citations?hl=en&user=36X0IZcAAAAJ"><center><img src="images/orgs/christos.jpeg" alt="Christos Bampis"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Christos Bampis</h3>
+											<p>Netflix</p>
+										</div>
+									</div>
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<center><img src="images/orgs/Ryanlei-Headshot.jpg" alt="Ryan Lei"></center>
+										<div class="mu-single-organizer-info">
+											<h3>Ryan Lei</h3>
+											<p>Meta</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+									<!-- Start single speaker -->
+									<div class="mu-single-organizer">
+										<a href=""><center><img src="images/orgs/daniel.jpeg" alt="Daniel Motilla"></center></a>
+										<div class="mu-single-organizer-info">
+											<h3>Daniel Motilla</h3>
+											<p>Sony PlayStation</p>
+										</div>
+									</div>
+									<!-- End single speaker -->
+
+
+								</div>
+							</div>
+
+							<!-- End ORGANIZERS-->
+						</div>
+
+						<!-- PC MEMBERS-->
+						<div class="row", align="left">
+							<h2 style="font-size:30px; color:grey; font-weight: 200">Program Committee</h2>
+							<!-- 	<div class="large-12 columns" style="text-align:left; column-gap:70px"> -->
+							<!-- 		<li style="margin-left:30px"> -->
+							<!--                 </li>     -->
+							<div class="column">
+								<b>Marcos V. Conde</b> (University of Würzburg & Sony PlayStation)<br>
+								<b>Radu Timofte</b> (University of Würzburg)<br>
+								Tim Seizinger (University of Würzburg)<br>
+								Florin Vasluianu (University of Würzburg)<br>
+								Zongwei Wu (University of Würzburg)<br>
+								<b>Ioannis Katsavounidis</b> (Meta)<br>
+								<b>Ryan Lei</b> (Meta)<br>
+								Wen Li (Meta)<br>
+								Cosmin Stejerean (Meta)<br>
+								Shiranchal Taneja (Meta)<br>
+								<br>
+							</div>
+							
+							<div class="column">
+								<b>Christos Bampis</b> (Netflix)<br>
+								Zhi Li (Netflix)<br>
+								<b>Rakesh Ranjan</b> (Meta Reality Labs)<br>
+								<b>Andy Bigos</b> (Sony PlayStation)<br>
+								<b>Daniel Motilla</b> (Sony PlayStation)<br>
+								<b>Saman Zadtootaghaj</b> (Sony PlayStation)<br>
+								Chang Gao (Delft University of Technology)<br>
+								<b>Qinyu Chen</b> (University of Zurich and ETHZ & Leiden Univ)<br>
+								<b>Zuowen Wang</b> (University of Zurich and ETHZ)<br>
+								Shih-Chii Liu (University of Zurich and ETHZ)<br>
+								<br>
+								<br>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- END ORGANIZERS -->
+
+
+	</main>
+	<!-- End MAIN CONTENT-->
+
+
+
+	<!-- Start footer -->
+	<footer id="mu-footer" role="contentinfo">
+		<div class="container">
+			<div class="mu-footer-area">
+				<div class="mu-footer-bottom">
+					<p>Please feel free to <a href="mailto:marcos.conde@uni-wuerzburg.de">contact us (✉️)</a> for any inquiries. </p>
+					<p class="mu-copy-right"> This website is based on the <a href="https://hfna-workshop.github.io/">HFNA workshop</a>. &copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer -->
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	<!-- Slick slider -->
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <!-- Event Counter -->
+    <script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
+    <!-- Custom js -->
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+
+
+  </body>
+</html>
