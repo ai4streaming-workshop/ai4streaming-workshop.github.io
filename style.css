@@ -601,6 +601,32 @@ list-style-type: none;
 /* EVENT SCHEDULE */
 /*--------------------*/
 
+/* Schedule Table */
+.schedule-table {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 1.5em;
+}
+.schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f7f9fb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.schedule-table th, .schedule-table td {
+    padding: 0.6em 1.2em;
+    border-bottom: 1px solid #e3e6f0;
+    text-align: left;
+}
+.schedule-table th {
+    background: #e3e6f0;
+    color: #1a237e;
+}
+.schedule-table tr:last-child td {
+    border-bottom: none;
+}
+
 #mu-schedule {
 	background-color: #f8f8f8;
 	display: inline;
